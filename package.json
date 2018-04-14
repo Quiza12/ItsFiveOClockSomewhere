@@ -1,0 +1,14 @@
+{
+  "name": "fiveoclocksomewhere",
+  "version": "1.0.0",
+  "description": "Need a beer? It's five o'clock somewhere. Where? You're about to find out.",
+  "main": "request.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Matthew Querzoli",
+  "license": "ISC",
+  "dependencies": {
+    "request": "^2.85.0"
+  }
+}

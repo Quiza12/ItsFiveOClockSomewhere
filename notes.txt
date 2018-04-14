@@ -1,0 +1,19 @@
+A request to a timezone API (https://timezonedb.com/) that will determine where in the world it's five o'clock - giving a specific answer to the 'It's five o'clock somewhere' saying.
+
+Sample:
+
+Where is it five o'clock? I need to justify this beer.
+
+Use the following as your excuse, you alcoholic.
+
+Australia - Australia/Adelaide - 5
+Australia - Australia/Broken_Hill - 5
+Australia - Australia/Darwin - 5
+Indonesia - Asia/Jayapura - 5
+Japan - Asia/Tokyo - 5
+South Korea - Asia/Seoul - 5
+Palau - Pacific/Palau - 5
+Russia - Asia/Chita - 5
+Russia - Asia/Khandyga - 5
+Russia - Asia/Yakutsk - 5
+East Timor - Asia/Dili - 5
