@@ -39,10 +39,16 @@ function getTimeFromUnixTime(unixTime) {
   return hours;
 }
 
+function cleanTimeZoneValue(timeZone) {
+  var firstCleanse = timeZone.replace(/(\w+\/)/, "");
+  var secondCleanse = firstCleanse.replace('_', " ");
+  return secondCleanse;
+}
+
 function logValues() {
   for (var i = 0; i < countryNames.length; i++) {
     if (times[i] == 5) {
-      console.log(countryNames[i] + ' - ' + timeZones[i] + ' - ' + times[i]);
+      console.log(cleanTimeZoneValue(timeZones[i]) + ' - ' + countryNames[i]);
     }
   }
 }
