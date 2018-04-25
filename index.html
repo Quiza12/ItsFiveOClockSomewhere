@@ -4,34 +4,54 @@
 <head>
   <meta charset='utf-8'>
   <meta Content-Type: "text/html" charset=utf-8 />
+  <meta name="description" content="It's Five O'Clock Somewhere">
+  <meta name="author" content="Matthew Querzoli">
+  <meta name="keywords" content="Q, Matthew, Querzoli, Beer, Five, Time, Beverage, Oprah Tinfrey">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.2/css/bootstrap.min.css" integrity="sha384-PsH8R72JQ3SOdhVi3uxftmaW6Vc51MKb0q5P2rRUpPvrszuE4W1povHYgTpBfshb" crossorigin="anonymous">
   <link rel="stylesheet" href="./styles.css">
+  <link rel="icon" href="images/favicon.png">
+
+  <script src="./scripts.js"></script>
+
+  <title>🍺🕔</title>
 </head>
 
 <body>
   <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-4">
-        <h1>It's Five O'Clock Somewhere</h1>
-        <p>By <a href="https://www.matthewquerzoli.com">Matt Querzoli</a></p>
+    <div class="row align-items-center">
+      <div class="col-sm-4 nav-col">
+        <h1>It's <br/>Five <br/>O'Clock <br/>Somewhere</h1>
+        <p class="author-byline">By complete and utter pig <a href="https://www.matthewquerzoli.com">Matt Querzoli</a></p>
+        <img src="images/me-and-beer.png"/>
       </div>
-      <div class="col-sm-8 align-self-center">
-        <h2>You know why you're here.</h2>
-        <h2>You need a beer.</h2>
-        <h2>But how do you justify the beverage?</h2>
-        <h2>You're gonna need some leverage.</h2>
-        <h2>It's five o'clock in the following places:</h2>
-        <ul>
-          <li>Here</li>
-          <li>Here</li>
-          <li>Here</li>
-          <li>Here</li>
-        </ul>
+      <div class="col-sm-4 info-col">
+        <div class="text-container">
+          <div class="spiel-container">
+            <p><b>You know why you're here.</b></p>
+            <p><b>You need a beer.</b></p>
+
+            <p><b>But how do you justify the beverage?</b></p>
+            <p><b>You're gonna need some leverage.</b></p>
+          </div>
+          <br />
+        </div>
+      </div>
+      <div class="col-sm-4 results-col">
+        <div class="loader"></div>
+        <div class="animate-bottom">
+          <div class="results-container">
+            <div class="button-container">
+              <p>It's five o'clock in the following places:</p>
+            </div>
+            <ul class="results-list">
+            </ul>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </body>
-
-<script src="./request.js"></script>
 
 </html>
