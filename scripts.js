@@ -10,7 +10,7 @@ var times = [];
 
 function getTimezones() {
   var xmlhttp = new XMLHttpRequest();
-  var url = "http://api.timezonedb.com/v2/list-time-zone?key=W9VXG3ZAZ6ZD&format=json";
+  var url = "https://api.timezonedb.com/v2/list-time-zone?key=W9VXG3ZAZ6ZD&format=json";
 
   xmlhttp.onreadystatechange = function() {
       if (this.readyState == 4 && this.status == 200) {
