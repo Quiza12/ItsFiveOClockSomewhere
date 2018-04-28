@@ -10,7 +10,7 @@ var unixTimes = [];
 var times = [];
 
 var request = require('request');
-request('http://api.timezonedb.com/v2/list-time-zone?key=W9VXG3ZAZ6ZD&format=json', function (error, response, body) {
+request('https://api.timezonedb.com/v2/list-time-zone?key=W9VXG3ZAZ6ZD&format=json', function (error, response, body) {
   var jsonArray = JSON.parse(body);
   var arr = jsonArray.zones;
   extractCountriesAndTimes(arr);
@@ -47,7 +47,7 @@ function cleanTimeZoneValue(timeZone) {
 
 function logValues() {
   for (var i = 0; i < countryNames.length; i++) {
-    if (times[i] == 5) {
+    if (times[i] == 3) {
       console.log(cleanTimeZoneValue(timeZones[i]) + ' - ' + countryNames[i]);
     }
   }
