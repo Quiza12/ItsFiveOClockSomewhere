@@ -56,11 +56,41 @@ function logValues() {
       console.log(cleanedTimeZone + ' - ' + countryNames[i]);
     }
   }
+  removeLoaderAddResults();
+  // if (resultsArray.length < 24) {
+  //   for (var i = 0; resultsArray.length; i++) {
+  //     appendToList(resultsArray[i]);
+  //   }
+  //   removeLoader();
+  //   document.getElementsByClassName('results-container')[0].style.display = 'block';
+  // } else {
+  //   var indexToSplit = 23;
+  //   var firstArr = arr.slice(0, indexToSplit);
+  //   var secondArr = arr.slice(indexToSplit + 1);
+  //   removeLoader();
+  //   document.getElementsByClassName('results-container')[0].style.display = 'block';
+  //   document.getElementsByClassName('more-button')[0].style.display = 'block';
+  //
+  // }
+
+}
+
+function removeLoaderAddResults() {
+  document.getElementsByClassName('glass')[0].style.display = 'none';
+  document.getElementsByClassName('beer')[0].style.display = 'none';
+  document.getElementsByClassName('handle')[0].style.display = 'none';
+  document.getElementsByClassName('foam')[0].style.display = 'none';
+
   document.getElementsByClassName('results-container')[0].style.display = 'block';
-  document.getElementsByClassName('loader')[0].style.display = 'none';
 }
 
 function appendToList(timeZone) {
+  var li = document.createElement('li');
+	li.innerHTML += timeZone;
+  document.getElementsByClassName('results-list')[0].appendChild(li);
+}
+
+function appendToListOverflow(timeZone) {
   var li = document.createElement('li');
 	li.innerHTML += timeZone;
   document.getElementsByClassName('results-list')[0].appendChild(li);
