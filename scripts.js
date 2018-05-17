@@ -28,6 +28,7 @@ function extractCountriesAndTimes(responseBody) {
     timeZones.push(element.zoneName);
     unixTimes.push(element.timestamp);
   });
+  console.log(timeZones);
 }
 
 function convertTimes() {
@@ -44,7 +45,8 @@ function getTimeFromUnixTime(unixTime) {
 
 function cleanTimeZoneValue(timeZone) {
   var firstCleanse = timeZone.replace(/(\w+\/)/, '');
-  var secondCleanse = firstCleanse.replace('_', ' ');
+  var secondCleanse = firstCleanse.replace(/[_]/g, ' ');
+  //var thirdCleanse = secondCleanse.replace('_', ' ');
   return secondCleanse;
 }
 
@@ -57,22 +59,6 @@ function logValues() {
     }
   }
   removeLoaderAddResults();
-  // if (resultsArray.length < 24) {
-  //   for (var i = 0; resultsArray.length; i++) {
-  //     appendToList(resultsArray[i]);
-  //   }
-  //   removeLoader();
-  //   document.getElementsByClassName('results-container')[0].style.display = 'block';
-  // } else {
-  //   var indexToSplit = 23;
-  //   var firstArr = arr.slice(0, indexToSplit);
-  //   var secondArr = arr.slice(indexToSplit + 1);
-  //   removeLoader();
-  //   document.getElementsByClassName('results-container')[0].style.display = 'block';
-  //   document.getElementsByClassName('more-button')[0].style.display = 'block';
-  //
-  // }
-
 }
 
 function removeLoaderAddResults() {
