@@ -28,7 +28,6 @@ function extractCountriesAndTimes(responseBody) {
     timeZones.push(element.zoneName);
     unixTimes.push(element.timestamp);
   });
-  console.log(timeZones);
 }
 
 function convertTimes() {
@@ -46,16 +45,17 @@ function getTimeFromUnixTime(unixTime) {
 function cleanTimeZoneValue(timeZone) {
   var firstCleanse = timeZone.replace(/(\w+\/)/, '');
   var secondCleanse = firstCleanse.replace(/[_]/g, ' ');
-  //var thirdCleanse = secondCleanse.replace('_', ' ');
   return secondCleanse;
 }
 
 function logValues() {
+  var listCount = 0;
   for (var i = 0; i < countryNames.length; i++) {
-    if (times[i] == 3) {
+    if ((times[i] == 3) && (listCount <= 24)) {
       var cleanedTimeZone = cleanTimeZoneValue(timeZones[i]);
       appendToList(cleanedTimeZone + ' - ' + countryNames[i]);
       console.log(cleanedTimeZone + ' - ' + countryNames[i]);
+      listCount++;
     }
   }
   removeLoaderAddResults();
