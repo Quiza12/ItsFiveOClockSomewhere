@@ -1,4 +1,4 @@
-[www.itsfiveoclocksomehwere.com](https://www.itsfiveoclocksomehwere.com/)
+[www.itsfiveoclocksomewheregetmeabeer.com](http://www.itsfiveoclocksomewheregetmeabeer.com/)
 
 # ItsFiveOClockSomewhere
 Where is it five o'clock? I need to justify this beer.
@@ -16,7 +16,7 @@ I like beer and have often used the phrase "It's five o'clock somewhere" in orde
 
 **OR**
 
-1. [Click here.](https://www.itsfiveoclocksomehwere.com/)
+1. [Click here.](http://www.itsfiveoclocksomewheregetmeabeer.com/)
 
 ## When?
 I dunno. Anytime. Whenever you're thirsty. 
@@ -26,6 +26,9 @@ Wherever it's legal (wink).
 
 ## Who?
 With your mates. Or yourself.
+
+## That web address is a bit long, isn't it?
+I'm compensating for something.
 
 ## You're not this talented. Who helped you?
 [TimeZoneDB](https://timezonedb.com/). They're good people.
