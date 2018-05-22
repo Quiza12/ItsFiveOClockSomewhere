@@ -32,14 +32,23 @@ function extractCountriesAndTimes(responseBody) {
 
 function convertTimes() {
   unixTimes.forEach(function(element) {
-    times.push(getTimeFromUnixTime(element));
+    times.push(getHoursFromUnixTime(element));
   });
 }
 
-function getTimeFromUnixTime(unixTime) {
+function getHoursFromUnixTime(unixTime) {
   var date = new Date(unixTime*1000);
   var hours = date.getHours();
   return hours;
+}
+
+function getMinutesFromUnixTime(unixTime) {
+  var date = new Date(unixTime*1000);
+  var minutes = date.getMinutes().toString();
+  if (minutes.charAt(1) == '') {
+    minutes = '0' + minutes;
+  }
+  return minutes;
 }
 
 function cleanTimeZoneValue(timeZone) {
@@ -53,8 +62,8 @@ function logValues() {
   for (var i = 0; i < countryNames.length; i++) {
     if ((times[i] == 3) && (listCount <= 24)) {
       var cleanedTimeZone = cleanTimeZoneValue(timeZones[i]);
-      appendToList(cleanedTimeZone + ' - ' + countryNames[i]);
-      console.log(cleanedTimeZone + ' - ' + countryNames[i]);
+      var result = cleanedTimeZone + ' - ' + countryNames[i] + ' - ' + '5:' + getMinutesFromUnixTime(unixTimes[i]) + 'pm';
+      appendToList(result);
       listCount++;
     }
   }
