@@ -53,17 +53,19 @@ function getMinutesFromUnixTime(unixTime) {
 
 function cleanTimeZoneValue(timeZone) {
   var firstCleanse = timeZone.replace(/(\w+\/)/, '');
-  var secondCleanse = firstCleanse.replace(/[_]/g, ' ');
-  return secondCleanse;
+  var secondCleanse = firstCleanse.replace(/(\w+\/)/, '');
+  var thirdCleanse = secondCleanse.replace(/[_]/g, ' ');
+  return thirdCleanse;
 }
 
 function logValues() {
   var listCount = 0;
   for (var i = 0; i < countryNames.length; i++) {
-    if ((times[i] == 3) && (listCount <= 24)) {
+    if ((times[i] == 3) && (listCount <= 23)) {
       var cleanedTimeZone = cleanTimeZoneValue(timeZones[i]);
       var result = cleanedTimeZone + ' - ' + countryNames[i] + ' - ' + '5:' + getMinutesFromUnixTime(unixTimes[i]) + 'pm';
       appendToList(result);
+      console.log(result);
       listCount++;
     }
   }
@@ -71,11 +73,7 @@ function logValues() {
 }
 
 function removeLoaderAddResults() {
-  document.getElementsByClassName('glass')[0].style.display = 'none';
-  document.getElementsByClassName('beer')[0].style.display = 'none';
-  document.getElementsByClassName('handle')[0].style.display = 'none';
-  document.getElementsByClassName('foam')[0].style.display = 'none';
-
+  document.getElementsByClassName('beer-animation')[0].style.display = 'none';
   document.getElementsByClassName('results-container')[0].style.display = 'block';
 }
 
