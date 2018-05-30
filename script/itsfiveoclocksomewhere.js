@@ -40,9 +40,10 @@ function getTimeFromUnixTime(unixTime) {
 }
 
 function cleanTimeZoneValue(timeZone) {
-  var firstCleanse = timeZone.replace(/(\w+\/)/, "");
-  var secondCleanse = firstCleanse.replace('_', " ");
-  return secondCleanse;
+  var firstCleanse = timeZone.replace(/(\w+\/)/, '');
+  var secondCleanse = firstCleanse.replace(/(\w+\/)/, '');
+  var thirdCleanse = secondCleanse.replace(/[_]/g, ' ');
+  return thirdCleanse;
 }
 
 function logValues() {
